@@ -1,0 +1,698 @@
+:root {
+  --color-blue: rgb(26, 115, 232);
+  --color-gray: rgb(237, 237, 237);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  word-wrap: break-word;
+}
+
+a {
+  color: var(--color-blue);
+}
+
+.download-text {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.file-icon {
+  width: 45px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-left-container {
+  width: 27.5%;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 24px;
+  height: 24px;
+  padding: 0 21px;
+}
+
+.header-center-container {
+  width: 45%;
+  display: flex;
+  align-items: center;
+}
+
+.header-search {
+  background-color: rgb(225, 225, 225);
+  width: 100%;
+  height: 50%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  width: 15px;
+  height: 15px;
+  padding: 10px;
+}
+
+.search-title {
+  color: rgb(176, 176, 176);
+  font-size: 12px;
+}
+
+.header-right-container {
+  width: 27.5%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+.dot-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.title-container {
+  width: 45%;
+  margin: auto;
+  margin-top: 21px;
+  margin-bottom: 21px;
+  text-align: center;
+  font-size: 13px;
+  color: rgb(188, 188, 188);
+  font-weight: 600;
+}
+
+span.title {
+  position: relative;
+}
+
+.building-icon {
+  width: 40px;
+  position: absolute;
+  left: -45px;
+  top: -5px;
+}
+
+.date {
+  width: 45%;
+  margin: auto;
+  margin-top: 21px;
+  margin-bottom: 6px;
+  color: rgb(82, 82, 82);
+  font-weight: 400;
+  font-size: 14px;
+  padding: 6px;
+}
+
+.card-container {
+  width: 45%;
+  margin: auto;
+  min-height: 132px;
+  border-radius: 10px;
+  box-shadow: 0 0 3px 1px rgb(217, 217, 217);
+  margin: 6px auto;
+  display: flex;
+}
+
+.file-icon-left-container {
+  min-width: 15%;
+  min-height: 132px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid rgb(186, 186, 186);
+}
+
+.file-icon-center-container {
+  min-width: 70%;
+  padding: 16px 16px 16px 24px;
+  font-size: 13px;
+}
+
+.file-icon-title {
+  font-weight: 700;
+}
+
+.file-icon-text {
+  color: rgb(95, 99, 104);
+  font-size: 13px;
+  padding-top: 6px;
+}
+
+.show-in-folder {
+  margin-top: 30px;
+}
+
+.file-icon-right-container {
+  width: 15%;
+  min-height: 132px;
+  margin: auto;
+}
+
+.file-icon-dot-icon-container {
+  margin: 21px;
+}
+
+#popup-toggle:checked ~ .popup-form {
+  display: block;
+}
+
+#popup-toggle:checked + .blur-background {
+  display: block;
+}
+
+.plus-label {
+  position: fixed;
+  right: 40px;
+  bottom: 30px;
+  cursor: pointer;
+}
+
+.plus-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.popup-form {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  width: 50%;
+  height: 50%;
+  z-index: 2;
+  border-radius: 6px;
+  background-color: white;
+  padding: 16px;
+}
+
+.close-button {
+  position: absolute;
+  right: 21px;
+  top: 21px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.popup-title {
+  font-size: 14px;
+}
+
+.file-name {
+  font-size: 12px;
+  margin-top: 21px;
+  color: var(--color-blue);
+  font-weight: 600;
+}
+
+.file-name-input {
+  all: unset;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 6px;
+  padding: 6px;
+  border-radius: 6px;
+  background-color: rgb(237, 237, 237);
+}
+
+.file-link {
+  font-size: 12px;
+  margin-top: 6px;
+  color: var(--color-blue);
+  font-weight: 600;
+}
+
+.file-link-input {
+  all: unset;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 6px;
+  padding: 6px;
+  border-radius: 6px;
+  background-color: rgb(237, 237, 237);
+}
+
+.choose-file {
+  padding-top: 21px;
+}
+
+.save-button {
+  all: unset;
+  background-color: var(--color-blue);
+  padding: 6px 21px;
+  border-radius: 6px;
+  font-weight: 600;
+  color: white;
+  position: absolute;
+  bottom: 21px;
+  right: 21px;
+  cursor: pointer;
+}
+
+.cancel-button {
+  all: unset;
+  background-color: var(--color-gray);
+  padding: 6px 21px;
+  border-radius: 6px;
+  font-weight: 600;
+  color: black;
+  position: absolute;
+  bottom: 21px;
+  right: 106px;
+  cursor: pointer;
+}
+
+.blur-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  z-index: 1;
+  opacity: 0.4;
+}
+/* App.css */
+/* Styles for Creator input */
+/* Styles for Creator input */
+.creator {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.creator label {
+  margin-bottom: 5px;
+}
+
+.creator input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.creator input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Styles for File name input */
+.file-name {
+  font-size: 12px;
+  margin-top: 21px;
+  color: var(--color-blue);
+  font-weight: 600;
+}
+
+.file-name-input {
+  all: unset;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 6px;
+  padding: 6px;
+  border-radius: 6px;
+  background-color: rgb(237, 237, 237);
+}
+.delete-icon {
+  width: 20px; /* Adjust the width as needed */
+  height: 20px; /* Adjust the height as needed */
+  cursor: pointer; /* Set cursor to pointer to indicate it's clickable */
+}
+.file-photo {
+  margin-bottom: 20px; /* Adjust margin-bottom as needed */
+}
+
+.file-photo label {
+  display: block;
+  margin-bottom: 5px; /* Adjust margin-bottom as needed */
+}
+
+.file-photo input[type="file"] {
+  /* Add specific styling for the file input if necessary */
+}
+.selected-photo-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px; /* Adjust margin as needed */
+}
+
+.selected-photo {
+  max-width: 50%;
+  max-height: 40%;
+  width: 100px;
+}
+/* test */
+.delete-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.delete-popup h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.delete-popup p {
+  margin-bottom: 15px;
+}
+
+.delete-popup-buttons button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-popup-buttons button.yes-button {
+  background-color: #e74c3c; /* Red color for the "Yes" button */
+}
+
+.delete-popup-buttons button.no-button {
+  background-color: #2ecc71; /* Green color for the "No" button */
+}
+
+.delete-popup-buttons button:hover {
+  filter: brightness(1.2); /* Lighten the button on hover */
+}
+.card-container.selected {
+  background-color: #f0f0f0; /* Add a background color for the selected file card */
+}
+/* eadite */
+.card-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.card-container:hover {
+  background-color: #f0f0f0;
+}
+
+.file-icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.file-details {
+  flex-grow: 1;
+}
+
+.file-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.file-creator {
+  font-size: 14px;
+  color: #666;
+}
+
+.file-actions {
+  display: flex;
+  align-items: center;
+}
+
+.delete-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+/* add stye popup from   */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.popup-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.popup-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.popup-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.popup-form input[type="text"],
+.popup-form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.popup-form .selected-photo-container {
+  text-align: center;
+}
+
+.popup-form .selected-photo {
+  max-width: 100%;
+  max-height: 200px;
+  margin-top: 10px;
+}
+
+.popup-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.popup-form button:hover {
+  background-color: #0056b3;
+}
+
+.popup-form .cancel-button {
+  background-color: #dc3545;
+  margin-left: 10px;
+}
+
+.popup-form .cancel-button:hover {
+  background-color: #bd2130;
+}
+
+/* App.css */
+
+/* Your existing CSS code */
+
+/* Add style for the delete popup */
+.delete-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.delete-popup h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.delete-popup-buttons button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-popup-buttons button.yes-button {
+  background-color: #e74c3c; /* Red color for the "Yes" button */
+}
+
+.delete-popup-buttons button.no-button {
+  background-color: #2ecc71; /* Green color for the "No" button */
+}
+
+.delete-popup-buttons button:hover {
+  filter: brightness(1.2); /* Lighten the button on hover */
+}
+
+/* Add style for the popup form */
+
+.popup-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  height: 40px;
+}
+
+.popup-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.popup-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.popup-form input[type="text"],
+.popup-form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.popup-form .selected-photo-container {
+  text-align: center;
+  margin-top: -20px;
+}
+
+.popup-form .selected-photo {
+  max-width: 100%;
+  max-height: 200px;
+  margin-top: 0px;
+  width: 60px;
+}
+
+.popup-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.popup-form button:hover {
+  background-color: #0056b3;
+}
+
+.popup-form .cancel-button {
+  background-color: #dc3545;
+  margin-left: 10px;
+}
+
+.popup-form .cancel-button:hover {
+  background-color: #bd2130;
+}
+
+/* Additional styling for the card container */
+.card-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.card-container:hover {
+  background-color: #f0f0f0;
+}
+
+.file-icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.file-details {
+  flex-grow: 1;
+}
+
+.file-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.file-creator {
+  font-size: 14px;
+  color: #666;
+}
+
+.file-actions {
+  display: flex;
+  align-items: center;
+}
+
+.delete-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+/* App.css */
