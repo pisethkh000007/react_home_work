@@ -244,3 +244,216 @@ span.title {
   z-index: 1;
   opacity: 0.4;
 }
+/* General styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f9;
+}
+
+header {
+  background-color: #3f51b5;
+  color: white;
+  padding: 20px;
+
+  text-align: center;
+}
+
+/* File Card Styles */
+.file-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 1000px;
+  margin: 10px auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.file-card.selected {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.file-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.file-header,
+.file-footer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.file-header {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.file-icon {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+.file-info {
+  flex-grow: 1;
+}
+
+.file-name {
+  font-weight: bold;
+  display: block;
+}
+
+.creator {
+  font-size: 14px;
+  color: #777;
+}
+
+.file-options {
+  display: flex;
+  align-items: center;
+}
+
+.file-options .dot-icon,
+.file-footer .delete-icon {
+  cursor: pointer;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.file-footer {
+  justify-content: space-between;
+}
+
+.file-date {
+  font-size: 12px;
+  color: #999;
+}
+
+.file-photo {
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+}
+.popup-form {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.popup-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-form input[type="text"],
+.popup-form input[type="file"] {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.popup-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.popup-form button[type="submit"] {
+  background-color: #3f51b5;
+  color: white;
+}
+
+.popup-form button[type="button"] {
+  background-color: #f44336;
+  color: white;
+}
+
+.popup-form img {
+  margin-top: 10px;
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+/* Overlay to darken the background when the popup is active */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+/* Delete Popup Styles */
+.delete-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.delete-popup {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  text-align: center;
+}
+
+.delete-popup p {
+  margin: 0 0 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.delete-popup button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.delete-popup button:first-of-type {
+  background-color: #3f51b5;
+  color: white;
+}
+
+.delete-popup button:last-of-type {
+  background-color: #f44336;
+  color: white;
+}
+/* Selected Photo Styles */
+.selected-photo {
+  max-width: 100px;
+  max-height: 100px;
+  margin: 10px 0;
+  object-fit: contain;
+}
